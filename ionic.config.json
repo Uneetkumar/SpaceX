@@ -1,0 +1,7 @@
+{
+  "name": "BootCamp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
