@@ -1,23 +1,23 @@
 <ion-card>
   <ion-card-header>
     <ion-card-subtitle>
-      {{serial}}
-      {{name}}
+      {{satellite.flight_number}}
+      {{satellite.name}}
     </ion-card-subtitle>
   </ion-card-header>
   <ion-card-content>
     <ion-thumbnail>
-      <a href={{src}} target="_blank">
+      <a [href]="satellite.links.patch.large" target="_blank">
         <ion-img
-          [src]="src"
+          [src]="satellite.links.patch.large"
         >
         </ion-img>
       </a>
     </ion-thumbnail>
     <ion-label>
-      {{details}}
+      {{satellite.details}}
     </ion-label>
-    <a href={{articles}} target="_blank">
+    <a [href]="satellite.links.aritcle" target="_blank">
       <ion-button>Read More</ion-button>
     </a>
   </ion-card-content>

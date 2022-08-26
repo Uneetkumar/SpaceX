@@ -4,15 +4,14 @@
 <!--    [searcher]="searchTerm"-->
 <!--  ></app-search>-->
   <ion-searchbar
+    show-cancel-button="focus"
+    placeholder="Search Here"
+    animated
     [(ngModel)]="searchTerm"
   ></ion-searchbar>
   <app-scars
-    *ngFor="let post of satellites | filter:searchTerm"
-    [name]="post.name"
-    [src]="post.links.patch.large"
-    [serial]="post.flight_number"
-    [details]="post.details"
-    [articles]="post.links.article"
+    *ngFor="let satellite of satellites | filter:searchTerm"
+    [satellite]="satellite"
   ></app-scars>
 </ion-content>
 <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Satellite} from "../../modal/satellite";
 
 @Component({
   selector: 'app-scars',
@@ -6,14 +7,11 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./scars.component.scss'],
 })
 export class ScarsComponent implements OnInit {
-  @Input() name: any[];
-  @Input() serial: number[];
-  @Input() src: any[];
-  @Input() details: any[];
-  @Input() articles: any[];
+  @Input() satellite: Satellite = new Satellite();
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
