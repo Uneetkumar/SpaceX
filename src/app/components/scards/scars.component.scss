@@ -1,0 +1,15 @@
+@mixin Flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ion-card{
+ ion-card-content {
+  @include Flex
+ }
+}
+ion-label{
+  width: 70%;
+}
+

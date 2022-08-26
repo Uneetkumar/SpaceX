@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<app-header></app-header>
+<ion-content>
+<!--  <app-search-->
+<!--    [searcher]="searchTerm"-->
+<!--  ></app-search>-->
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+  ></ion-searchbar>
+  <app-scars
+    *ngFor="let post of satellites | filter:searchTerm"
+    [name]="post.name"
+    [src]="post.links.patch.large"
+    [serial]="post.flight_number"
+    [details]="post.details"
+    [articles]="post.links.article"
+  ></app-scars>
 </ion-content>
+<app-footer></app-footer>
+
+

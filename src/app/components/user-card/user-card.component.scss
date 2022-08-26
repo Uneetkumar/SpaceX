@@ -1,0 +1,13 @@
+@mixin flecR{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ion-img{
+  width: 30%;
+}
+ion-card-content{
+  @include flecR
+
+}

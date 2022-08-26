@@ -1,0 +1,9 @@
+@mixin leftRow {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+}
+ion-img{
+  width: 2%;
+}

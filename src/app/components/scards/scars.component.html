@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>
+      {{serial}}
+      {{name}}
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-thumbnail>
+      <a href={{src}} target="_blank">
+        <ion-img
+          [src]="src"
+        >
+        </ion-img>
+      </a>
+    </ion-thumbnail>
+    <ion-label>
+      {{details}}
+    </ion-label>
+    <a href={{articles}} target="_blank">
+      <ion-button>Read More</ion-button>
+    </a>
+  </ion-card-content>
+</ion-card>
